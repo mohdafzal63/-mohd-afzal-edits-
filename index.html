@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohd Afzal Edits — premium freelance video editing for creators, brands, businesses, weddings and social media." />
+  <meta name="theme-color" content="#080808" />
+  <title>Mohd Afzal Edits — Cinematic Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#070707;--panel:#101010;--panel2:#151515;--text:#f6f6f2;--muted:#9a9a9a;--line:rgba(255,255,255,.10);--accent:#d7ff45;--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 70% 0%,#1a1d11 0,#080808 30%,#070707 70%);color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:fixed;z-index:50;top:0;left:0;width:100%;background:rgba(7,7,7,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navin{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Manrope;font-weight:800;letter-spacing:-.04em;font-size:19px}
+    .brand span{color:var(--accent)}.links{display:flex;gap:25px;align-items:center}.links a{font-size:13px;color:#c8c8c8;transition:.25s}.links a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);padding:13px 19px;border-radius:999px;font-weight:700;font-size:13px;transition:.3s;cursor:pointer}
+    .btn.primary{background:var(--accent);color:#080808;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(215,255,69,.14)}
+    .hamb{display:none;background:none;border:0;color:white;font-size:27px}
+    .hero{min-height:100vh;display:grid;place-items:center;position:relative;padding:130px 0 70px;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.55) 48%,rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2200&q=85') center/cover;filter:saturate(.8)}
+    .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(215,255,69,.12),transparent 30%),linear-gradient(0deg,#070707,transparent 25%,rgba(0,0,0,.18))}
+    .hero-content{position:relative;z-index:2;max-width:850px}.eyebrow{color:var(--accent);font-size:12px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;margin-bottom:20px}
+    h1{font-family:Manrope;font-size:clamp(52px,8vw,105px);line-height:.94;letter-spacing:-.065em;max-width:900px}
+    .hero p{max-width:620px;color:#c7c7c7;font-size:18px;margin:28px 0 32px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+    .play-badge{position:absolute;right:5%;bottom:9%;z-index:2;width:150px;height:150px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.05);backdrop-filter:blur(10px);animation:spin 18s linear infinite}
+    .play-badge:before{content:"▶";font-size:28px;animation:spin 18s linear infinite reverse}.play-badge small{position:absolute;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#bbb}
+    @keyframes spin{to{transform:rotate(360deg)}} section{padding:115px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:50px}
+    .kicker{font-size:11px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;font-weight:800}.section-head h2{font-family:Manrope;font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:-.055em;margin-top:10px}
+    .section-head p{max-width:450px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.portrait{min-height:560px;border-radius:28px;background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1100&q=85') center/cover;position:relative;overflow:hidden}
+    .portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.7))}
+    .portrait-tag{position:absolute;bottom:25px;left:25px;z-index:2;background:rgba(10,10,10,.65);backdrop-filter:blur(15px);padding:14px 17px;border:1px solid var(--line);border-radius:14px}
+    .about-copy p{color:#b7b7b7;font-size:17px;margin:18px 0}.skills{display:flex;flex-wrap:wrap;gap:9px;margin:25px 0}.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:#ddd;font-size:12px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}.stat{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px}.stat b{font-family:Manrope;font-size:28px}.stat span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{padding:27px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015));border-radius:20px;transition:.3s}.card:hover{transform:translateY(-7px);border-color:rgba(215,255,69,.35)}
+    .icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#1b1b1b;border:1px solid var(--line);margin-bottom:45px;color:var(--accent);font-weight:800}.card h3{font-family:Manrope;font-size:18px}.card p{color:var(--muted);font-size:13px;margin-top:9px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{background:transparent;color:#aaa;border:1px solid var(--line);border-radius:999px;padding:9px 15px;cursor:pointer}.filter.active,.filter:hover{background:#fff;color:#000}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{min-height:330px;border-radius:20px;overflow:hidden;position:relative;cursor:pointer;border:1px solid var(--line);background:#111}.project img{width:100%;height:100%;object-fit:cover;transition:.5s}.project:hover img{transform:scale(1.06);filter:brightness(.65)}.project-info{position:absolute;left:0;right:0;bottom:0;padding:25px;background:linear-gradient(transparent,rgba(0,0,0,.92))}
+    .project-info small{color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:.15em}.project-info h3{font-family:Manrope;margin-top:5px}.project-info p{color:#bbb;font-size:12px}.project .open{position:absolute;right:18px;top:18px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);backdrop-filter:blur(10px)}
+    .compare{border-radius:26px;overflow:hidden;position:relative;height:550px;border:1px solid var(--line);background:#111}.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.after{clip-path:inset(0 0 0 50%)}.divider{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 25px rgba(255,255,255,.4);pointer-events:none}.handle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-weight:900;pointer-events:none}.range{position:absolute;inset:0;width:100%;opacity:0;cursor:ew-resize}
+    .compare-label{position:absolute;top:18px;padding:8px 11px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);border-radius:999px;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.raw{left:18px}.final{right:18px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.price{padding:35px;border:1px solid var(--line);border-radius:24px;background:#0e0e0e}.price.featured{border-color:rgba(215,255,69,.45);background:linear-gradient(160deg,#171b0e,#0d0d0d)}.price .label{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:800}.price h3{font:700 30px Manrope;margin:8px 0 22px}.price ul{list-style:none;color:#bcbcbc;min-height:180px}.price li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px}.price li:before{content:"✓";color:var(--accent);margin-right:9px}
+    .testimonial{max-width:850px;margin:auto;text-align:center}.stars{color:var(--accent);letter-spacing:.15em}.quote{font:600 clamp(24px,4vw,44px) Manrope;line-height:1.15;letter-spacing:-.04em;margin:20px 0}.person{display:flex;justify-content:center;align-items:center;gap:12px;color:#aaa}.avatar{width:42px;height:42px;border-radius:50%;background:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80') center/cover}
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:12px}.why-item{padding:30px;border:1px solid var(--line);border-radius:18px;background:#0d0d0d}.why-item b{font-family:Manrope;font-size:19px}.why-item p{color:var(--muted);font-size:13px;margin-top:8px}
+    .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.contact-copy p{color:#aaa;margin:18px 0}.contact-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}.social{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:12px;transition:.2s}.social:hover{background:#fff;color:#000}
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:11px;color:#aaa}input,select,textarea{width:100%;background:#0d0d0d;color:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;outline:none;font:inherit}input:focus,select:focus,textarea:focus{border-color:rgba(215,255,69,.6)}textarea{min-height:145px;resize:vertical}.form-actions{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap}
+    .cta{padding:70px;border-radius:28px;background:linear-gradient(120deg,#1b1f0d,#101010 60%);border:1px solid rgba(215,255,69,.2);text-align:center}.cta h2{font:800 clamp(38px,6vw,72px) Manrope;line-height:.98;letter-spacing:-.06em;max-width:820px;margin:0 auto 25px}
+    footer{padding:40px 0;border-top:1px solid var(--line);color:#8f8f8f;font-size:12px}.footer-in{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-links{display:flex;gap:18px}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:100;display:none;place-items:center;padding:25px;backdrop-filter:blur(12px)}.modal.show{display:grid}.modal-box{width:min(900px,100%);background:#0d0d0d;border:1px solid var(--line);border-radius:20px;overflow:hidden;position:relative}.modal video{display:block;width:100%;aspect-ratio:16/9;background:#000}.close{position:absolute;right:14px;top:14px;z-index:2;width:40px;height:40px;border:0;border-radius:50%;background:rgba(0,0,0,.7);color:#fff;font-size:20px;cursor:pointer}
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.links{display:none}.hamb{display:block}.nav .btn{display:none}.cards{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}.about-grid,.contact{grid-template-columns:1fr}.portrait{min-height:430px}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){.container{width:min(100% - 28px,var(--max))}.hero{padding-top:110px}.hero p{font-size:16px}.play-badge{display:none}section{padding:80px 0}.section-head{display:block}.section-head p{margin-top:18px}.cards,.portfolio,.pricing{grid-template-columns:1fr}.why{grid-template-columns:1fr}.compare{height:390px}form{grid-template-columns:1fr}.field.full,.form-actions{grid-column:auto}.cta{padding:45px 22px}.footer-in{display:block}.footer-links{margin-top:15px}.mobile-open .links{display:flex;position:absolute;top:76px;left:0;right:0;background:#0a0a0a;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="container navin">
+    <a class="brand" href="#home">Mohd Afzal <span>Edits</span></a>
+    <nav class="links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn primary" href="#contact">Hire Me</a><button class="hamb" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-content reveal">
+    <div class="eyebrow">Freelance Video Editor • Lucknow / Remote</div>
+    <h1>I Turn Your Footage Into Stories.</h1>
+    <p>Professional Video Editing for YouTubers, Creators, Businesses &amp; Brands.</p>
+    <div class="actions"><a class="btn primary" href="#portfolio">View My Work ↗</a><a class="btn" href="#contact">Hire Me</a></div>
+  </div>
+  <div class="play-badge" aria-hidden="true"><small>EDIT • CREATE • REPEAT</small></div>
+</section>
+
+<section id="about">
+ <div class="container about-grid">
+  <div class="portrait reveal"><div class="portrait-tag"><b>Mohd Afzal Edits</b><br><small>Creative Video Editor</small></div></div>
+  <div class="about-copy reveal"><div class="kicker">About the editor</div><h2 class="section-head" style="display:block;margin:10px 0 0"><span style="font-family:Manrope;font-size:clamp(38px,5vw,60px);letter-spacing:-.055em">Stories first. Style always.</span></h2>
+   <p>Meet <b>Hamd Pathan</b>, a professional video editor focused on engaging, cinematic and high-quality content. From fast-paced social clips to emotional wedding films, every cut is designed to hold attention and communicate clearly.</p>
+   <div class="skills"><span class="chip">YouTube Videos</span><span class="chip">Reels &amp; Shorts</span><span class="chip">Cinematic</span><span class="chip">Vlogs</span><span class="chip">Promotional</span><span class="chip">Gaming</span><span class="chip">Wedding &amp; Events</span></div>
+   <div class="stats"><div class="stat"><b>100+</b><span>Projects</span></div><div class="stat"><b>50+</b><span>Happy Clients</span></div><div class="stat"><b>3+</b><span>Years Experience</span></div><div class="stat"><b>100%</b><span>Creative Approach</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="services">
+ <div class="container"><div class="section-head reveal"><div><div class="kicker">What I do</div><h2>Editing that earns attention.</h2></div><p>Clean storytelling, purposeful motion and polished sound — tailored to your platform, audience and brand.</p></div>
+ <div class="cards">
+  <article class="card reveal"><div class="icon">01</div><h3>YouTube Video Editing</h3><p>Retention-focused cuts, pacing, b-roll, sound and graphics for long-form videos.</p></article>
+  <article class="card reveal"><div class="icon">02</div><h3>Instagram Reels</h3><p>Scroll-stopping short-form edits with rhythm, captions and punchy transitions.</p></article>
+  <article class="card reveal"><div class="icon">03</div><h3>YouTube Shorts</h3><p>Fast, clean and vertical edits built for attention in the first few seconds.</p></article>
+  <article class="card reveal"><div class="icon">04</div><h3>Cinematic Editing</h3><p>Film-style pacing, color, sound design and visual atmosphere.</p></article>
+  <article class="card reveal"><div class="icon">05</div><h3>Gaming Video Editing</h3><p>High-energy highlights, memes, sound effects and creator-style pacing.</p></article>
+  <article class="card reveal"><div class="icon">06</div><h3>Wedding &amp; Event</h3><p>Emotional storytelling, music-led edits and elegant cinematic moments.</p></article>
+  <article class="card reveal"><div class="icon">07</div><h3>Promotional Videos</h3><p>Sharp commercial edits that present products, services and brands with impact.</p></article>
+  <article class="card reveal"><div class="icon">08</div><h3>Social Media Editing</h3><p>Platform-ready content designed for consistent posting and brand identity.</p></article>
+ </div></div>
+</section>
+
+<section id="portfolio">
+ <div class="container"><div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>A reel of the good stuff.</h2></div><p>Replace these demo projects with your real edits. Click any card to preview a video.</p></div>
+ <div class="filters reveal"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="youtube">YouTube</button><button class="filter" data-filter="reels">Reels</button><button class="filter" data-filter="cinematic">Cinematic</button><button class="filter" data-filter="gaming">Gaming</button><button class="filter" data-filter="events">Events</button></div>
+ <div class="portfolio">
+  <article class="project reveal" data-cat="youtube" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>YouTube</small><h3>Creator Story — Episode 01</h3><p>Dynamic long-form storytelling.</p></div></article>
+  <article class="project reveal" data-cat="reels" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>Reels</small><h3>Social Energy</h3><p>Fast-paced vertical edit.</p></div></article>
+  <article class="project reveal" data-cat="cinematic" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>Cinematic</small><h3>Midnight Frames</h3><p>Atmospheric visual storytelling.</p></div></article>
+  <article class="project reveal" data-cat="gaming" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>Gaming</small><h3>Clutch Mode</h3><p>High-energy highlight package.</p></div></article>
+  <article class="project reveal" data-cat="events" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>Events</small><h3>Forever Starts Here</h3><p>Wedding story edit.</p></div></article>
+  <article class="project reveal" data-cat="reels" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=85"><div class="open">▶</div><div class="project-info"><small>Reels</small><h3>Brand Motion</h3><p>Product-led social content.</p></div></article>
+ </div></div>
+</section>
+
+<section id="before-after">
+ <div class="container"><div class="section-head reveal"><div><div class="kicker">Raw → final</div><h2>See the difference.</h2></div><p>Drag the handle to compare raw footage with the finished grade. Swap the demo images for your own before/after frames.</p></div>
+ <div class="compare reveal"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85" alt="Final edited footage"><img class="after" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85&sat=-100" alt="Raw footage"><span class="compare-label raw">Final</span><span class="compare-label final">Raw</span><div class="divider"></div><div class="handle">↔</div><input class="range" type="range" min="0" max="100" value="50" aria-label="Before and after comparison"></div>
+ </div>
+</section>
+
+<section id="pricing">
+ <div class="container"><div class="section-head reveal"><div><div class="kicker">Flexible packages</div><h2>Choose your level.</h2></div><p>Pricing is intentionally left customizable. Discuss your footage, turnaround and scope for an exact quote.</p></div>
+ <div class="pricing">
+  <article class="price reveal"><div class="label">For simple projects</div><h3>Basic</h3><ul><li>Short-form video</li><li>Basic cuts</li><li>Transitions</li><li>Music</li><li>Basic color correction</li></ul><a class="btn" href="#contact">Get Started</a></article>
+  <article class="price featured reveal"><div class="label">Most popular</div><h3>Professional</h3><ul><li>Advanced editing</li><li>Color grading</li><li>Sound design</li><li>Motion graphics</li><li>Captions</li><li>Multiple revisions</li></ul><a class="btn primary" href="#contact">Get Started</a></article>
+  <article class="price reveal"><div class="label">For premium work</div><h3>Premium</h3><ul><li>Cinematic editing</li><li>Advanced motion graphics</li><li>Professional color grading</li><li>Sound design</li><li>VFX</li><li>Priority delivery</li></ul><a class="btn" href="#contact">Get Started</a></article>
+ </div></div>
+</section>
+
+<section id="testimonials">
+ <div class="container testimonial reveal"><div class="kicker">Client words</div><div class="stars">★★★★★</div><div class="quote">“The edit finally feels like my brand. The pacing, music and details are exactly what I wanted.”</div><div class="person"><div class="avatar"></div><div><b>Client Name</b><br><small>Creator / Brand</small></div></div></div>
+</section>
+
+<section id="why">
+ <div class="container"><div class="section-head reveal"><div><div class="kicker">Why choose me</div><h2>Small details. Big difference.</h2></div></div>
+ <div class="why"><div class="why-item reveal"><b>01 — Fast Delivery</b><p>Clear timelines and organized workflow without sacrificing quality.</p></div><div class="why-item reveal"><b>02 — High-Quality Editing</b><p>Polished cuts, sound, color and motion designed to look professional.</p></div><div class="why-item reveal"><b>03 — Creative Storytelling</b><p>Every transition and cut has a purpose — not just an effect.</p></div><div class="why-item reveal"><b>04 — Attention to Detail</b><p>Clean audio, consistent color, captions and finishing touches.</p></div><div class="why-item reveal"><b>05 — Smooth Communication</b><p>Simple feedback loops and clear project updates.</p></div><div class="why-item reveal"><b>06 — Client Satisfaction</b><p>Your vision stays at the center from first brief to final export.</p></div></div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container contact"><div class="contact-copy reveal"><div class="kicker">Start a project</div><h2 style="font:800 clamp(42px,6vw,70px) Manrope;line-height:.95;letter-spacing:-.06em;margin-top:10px">Let's make your footage impossible to ignore.</h2><p>Tell me what you're making, what you have, and where you want it to go. I'll get back to you with the next steps.</p><div class="contact-links"><a class="social" href="#" aria-label="Instagram">IG</a><a class="social" href="#" aria-label="YouTube">YT</a><a class="social" href="#" aria-label="Facebook">FB</a></div></div>
+ <form id="contactForm" class="reveal"><div class="field"><label for="name">Name</label><input id="name" required placeholder="Your name"></div><div class="field"><label for="email">Email</label><input id="email" type="email" required placeholder="you@example.com"></div><div class="field"><label for="phone">WhatsApp / Phone</label><input id="phone" placeholder="+91 ..."></div><div class="field"><label for="type">Project Type</label><select id="type"><option>YouTube Video</option><option>Instagram Reel</option><option>Shorts</option><option>Cinematic</option><option>Wedding / Event</option><option>Promotional</option><option>Gaming</option><option>Other</option></select></div><div class="field full"><label for="budget">Budget</label><input id="budget" placeholder="Tell me your approximate budget or write 'Need a quote'"></div><div class="field full"><label for="message">Message</label><textarea id="message" required placeholder="Tell me about your project..."></textarea></div><div class="form-actions"><button class="btn primary" type="submit">Send Inquiry ↗</button><a class="btn" id="whatsappBtn" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a></div></form>
+ </div>
+</section>
+
+<section><div class="container"><div class="cta reveal"><h2>Have a Video in Mind? Let's Create Something Amazing.</h2><a class="btn primary" href="#contact">Start Your Project ↗</a></div></div></section>
+</main>
+
+<footer><div class="container footer-in"><div><b style="color:#fff">Mohd Afzal Edits</b><br>Turning ideas into cinematic stories.<br>© <span id="year"></span> Mohd Afzal Edits. All rights reserved.</div><div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" aria-label="Close">×</button><video id="modalVideo" controls playsinline></video></div></div>
+
+<script>
+  const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+  $('#year').textContent=new Date().getFullYear();
+
+  // Mobile navigation
+  $('.hamb').addEventListener('click',()=>document.querySelector('.nav').classList.toggle('mobile-open'));
+  $$('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav').classList.remove('mobile-open')));
+
+  // Scroll reveal
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  $$('.reveal').forEach(el=>observer.observe(el));
+
+  // Portfolio filtering + video modal
+  $$('.filter').forEach(btn=>btn.addEventListener('click',()=>{
+    $$('.filter').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
+    const f=btn.dataset.filter;
+    $$('.project').forEach(p=>p.style.display=(f==='all'||p.dataset.cat===f)?'block':'none');
+  }));
+  const modal=$('#modal'), video=$('#modalVideo');
+  $$('.project').forEach(p=>p.addEventListener('click',()=>{video.src=p.dataset.video; modal.classList.add('show'); video.play().catch(()=>{})}));
+  $('.close').addEventListener('click',()=>{video.pause();video.src='';modal.classList.remove('show')});
+  modal.addEventListener('click',e=>{if(e.target===modal){video.pause();video.src='';modal.classList.remove('show')}});
+
+  // Before / after slider
+  const range=$('.range'), after=$('.after'), divider=$('.divider'), handle=$('.handle');
+  range.addEventListener('input',()=>{const v=range.value;after.style.clipPath=`inset(0 0 0 ${v}%)`;divider.style.left=v+'%';handle.style.left=v+'%'});
+
+  // WhatsApp + form. Replace the number below with your real WhatsApp number.
+  const WHATSAPP_NUMBER='919999999999';
+  function waText(){
+    return `Hi Mohd Afzal, I want to discuss a video editing project.%0A%0AName: ${encodeURIComponent($('#name').value)}%0AProject: ${encodeURIComponent($('#type').value)}%0ABudget: ${encodeURIComponent($('#budget').value)}%0AMessage: ${encodeURIComponent($('#message').value)}`;
+  }
+  $('#whatsappBtn').addEventListener('click',e=>{e.currentTarget.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${waText()}`});
+  $('#contactForm').addEventListener('submit',e=>{e.preventDefault(); const email=$('#email').value.trim(); if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){alert('Please enter a valid email address.');return} const url=`https://wa.me/${WHATSAPP_NUMBER}?text=${waText()}`; window.open(url,'_blank');});
+</script>
+</body>
+</html>
